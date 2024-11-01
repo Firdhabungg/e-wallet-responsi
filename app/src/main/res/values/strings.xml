@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Responsi3055</string>
+    <string name="hai_dicky">Hai, Dicky</string>
+    <string name="your_avalaible_balance">Your avalaible balance</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="top_up_balance">Top Up Balance</string>
+    <string name="description">Description</string>
+    <string name="_1_000_000">1.000.000</string>
+    <string name="save">Save</string>
+    <string name="history_transaction">History Transaction</string>
+    <string name="_10_280_000">10.280.000</string>
+    <string name="top_up">Top Up</string>
+    <string name="outcome">Outcome</string>
+    <string name="monotize">Monotize</string>
+</resources>
