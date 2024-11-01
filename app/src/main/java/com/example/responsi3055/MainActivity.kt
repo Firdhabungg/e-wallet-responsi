@@ -17,10 +17,16 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
+    private lateinit var txtBalance: TextView
+    private val REQUEST_CODE_TOP_UP = 100
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        txtBalance = findViewById(R.id.textBallance)
+//        updateBalanceText()
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -49,11 +55,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(historyIntent)
         }
     }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        if (requestCode == REQUEST_CODE_TOP_UP && resultCode == RESULT_OK) {
+//            // Jika top up berhasil, update saldo
+//            updateBalanceText()
+//        }
+//    }
 
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container:ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ):View? {
-//        return inflater.inflate(R.layout.activity_main, container, false)
+//    private fun updateBalanceText() {
+//        val sharedPreferences = getSharedPreferences("eWallet", Context.MODE_PRIVATE)
+//        val currentBalance = sharedPreferences.getFloat("balance", 0f)
+//        txtBalance.text = getString(R.string.balance, currentBalance) // Gunakan string resource untuk format
 //    }
 }
